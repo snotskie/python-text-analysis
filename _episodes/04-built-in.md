@@ -15,7 +15,7 @@ objectives:
 keypoints:
 - "Use comments to add documentation to programs."
 - "A function may take zero or more arguments."
-- "Commonly-used built-in functions include `max`, `min`, and `round`."
+- "Commonly-used built-in functions include split(), join(), upper(), lower(), replace(), startswith()."
 - "Functions may only work for certain (combinations of) arguments."
 - "Functions may have default values for some arguments."
 - "Use the built-in function `help` to get help for a function."
@@ -29,7 +29,7 @@ keypoints:
 
 ~~~
 # This sentence isn't executed by Python.
-adjustment = 0.5   # Neither is this - anything after '#' is ignored.
+favoritePet = "Dog"   # Neither is this - anything after '#' is ignored.
 ~~~
 {: .language-python}
 
@@ -57,23 +57,91 @@ after
 ~~~
 {: .output}
 
-## Commonly-used built-in functions include `max`, `min`, and `round`.
+## Commonly-used built-in methods include split(), join(), upper(), lower(), replace(), startswith().
+### .upper() and .lower() methods
 
-*   Use `max` to find the largest value of one or more values.
-*   Use `min` to find the smallest.
-*   Both work on character strings as well as numbers.
-    *   "Larger" and "smaller" use (0-9, A-Z, a-z) to compare letters.
+*   Use `upper` method to return a copy of a string converted to upper case.
+*   Use ‘lower’ method to return a copy of a string converted to lower case. 
 
 ~~~
-print(max(1, 2, 3))
-print(min('a', 'A', '0'))
+first_name = “Ahmed”
+print(first_name.upper())
 ~~~
 {: .language-python}
 ~~~
-3
-0
+AHMED
 ~~~
 {: .output}
+*Note:  The upper() method example above did not modify the original string.  Instead, it created a copy of the original string.  This is because strings are considered immutable data types, meaning they cannot be changed after creation.  When you run a method on a string, a brand new string is created and the original remains unchanged.
+~~~
+first_name = “Ahmed”
+print(first_name.lower())
+~~~
+{: .language-python}
+~~~
+ahmed
+~~~
+{: .output}
+### .split() and .join() methods
+*   Use `split` method to split a string into a list where each word is a list item
+*   Use ‘join’ to method to take all items in an iterable object (i.e. objects capable of returning its members one at a time, such as a list) made up of strings and join them into one string.  
+~~~
+name = “Big Bird”
+print(name.split())
+~~~
+{: .language-python}
+~~~
+[‘Big’, ‘Bird’]
+~~~
+{: .output}
+~~~
+pets = [‘bunny’, ‘cat’, ‘dog’]
+print(‘+’.join(pets))
+~~~
+{: .language-python}
+~~~
+bunny+cat+dog
+
+~~~
+{: .output}
+* The string whose method is called (‘+’ in this example) is inserted in between each given string (passed via parameter). The result is returned as a new string.
+
+### .replace() and .startswith() methods
+*   Use ‘replace’ to return a copy of a string where a specified value is replaced with a specified value
+*   Use ‘starts with’ to returns true if the string starts with the specified value
+~~~
+pet = “I like cats”
+
+newPet = pet.replace(“cats”, “dogs”)
+
+print(pet)
+
+print(newPet)
+~~~
+{: .language-python}
+~~~
+I like cats
+I like dogs
+
+~~~
+{: .output}
+*Note:  all occurrences of the specified phrase will be replaced , if nothing else is specified.
+~~~
+species = “Cats are not dogs”
+
+x = species.startswith(“Cats”)
+
+print(x)
+
+~~~
+{: .language-python}
+~~~
+True
+
+~~~
+*The specified value must match exactly and is case sensitive.
+
+
 
 ## Functions may only work for certain (combinations of) arguments.
 
