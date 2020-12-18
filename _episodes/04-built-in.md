@@ -57,11 +57,11 @@ after
 ~~~
 {: .output}
 
-## Commonly-used built-in methods include split(), join(), upper(), lower(), replace(), startswith().
-### .upper() and .lower() methods
+## Commonly-used built-in methods include `split`, `join`, `upper`, `lower`, `replace`, `startswith`.
+### `upper` and `lower` methods
 
 *   Use `upper` method to return a copy of a string converted to upper case.
-*   Use ‘lower’ method to return a copy of a string converted to lower case. 
+*   Use `lower` method to return a copy of a string converted to lower case. 
 
 ~~~
 first_name = “Ahmed”
@@ -72,7 +72,8 @@ print(first_name.upper())
 AHMED
 ~~~
 {: .output}
-*Note:  The upper() method example above did not modify the original string.  Instead, it created a copy of the original string.  This is because strings are considered immutable data types, meaning they cannot be changed after creation.  When you run a method on a string, a brand new string is created and the original remains unchanged.
+
+*Note:  The `upper` method example above did not modify the original string.  Instead, it created a copy of the original string.  This is because strings are considered immutable data types, meaning they cannot be changed after creation.  When you run a method on a string, a brand new string is created and the original remains unchanged.
 ~~~
 first_name = “Ahmed”
 print(first_name.lower())
@@ -82,9 +83,10 @@ print(first_name.lower())
 ahmed
 ~~~
 {: .output}
-### .split() and .join() methods
+
+### `split` and `join` methods
 *   Use `split` method to split a string into a list where each word is a list item
-*   Use ‘join’ to method to take all items in an iterable object (i.e. objects capable of returning its members one at a time, such as a list) made up of strings and join them into one string.  
+*   Use `join` to method to take all items in an iterable object (i.e. objects capable of returning its members one at a time, such as a list) made up of strings and join them into one string.  
 ~~~
 name = “Big Bird”
 print(name.split())
@@ -104,11 +106,12 @@ bunny+cat+dog
 
 ~~~
 {: .output}
+
 * The string whose method is called (‘+’ in this example) is inserted in between each given string (passed via parameter). The result is returned as a new string.
 
-### .replace() and .startswith() methods
-*   Use ‘replace’ to return a copy of a string where a specified value is replaced with a specified value
-*   Use ‘starts with’ to returns true if the string starts with the specified value
+### `replace` and `startswith` methods
+*   Use `replace` to return a copy of a string where a specified value is replaced with a specified value
+*   Use `startswith` to returns true if the string starts with the specified value
 ~~~
 pet = “I like cats”
 
@@ -125,6 +128,7 @@ I like dogs
 
 ~~~
 {: .output}
+
 *Note:  all occurrences of the specified phrase will be replaced , if nothing else is specified.
 ~~~
 species = “Cats are not dogs”
@@ -139,6 +143,7 @@ print(x)
 True
 
 ~~~
+
 *The specified value must match exactly and is case sensitive.
 
 
